@@ -1,4 +1,5 @@
 const exercesesBlock = document.querySelector(".exerceses");
+const body = document.querySelector("body");
 
 const exercises = [
 	{
@@ -67,3 +68,4 @@ exercises.forEach((exercise, i) => {
 });
 
 exercesesBlock.append(list);
+body.style.backgroundImage = "url(./image.jpg)";
