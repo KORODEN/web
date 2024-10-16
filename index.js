@@ -68,4 +68,18 @@ exercises.forEach((exercise, i) => {
 });
 
 exercesesBlock.append(list);
-body.style.backgroundImage = "url(./image.jpg)";
+
+// угары с тёмной темой
+const darkModePreference = window.matchMedia("(prefers-color-scheme: dark)");
+
+if (darkModePreference.matches) {
+	body.style.backgroundImage = "url(./image.jpg)";
+}
+
+darkModePreference.addEventListener("change", (e) => {
+	if (e.matches) {
+		body.style.backgroundImage = "url(./image.jpg)";
+	} else {
+		body.style.backgroundImage = "none";
+	}
+});
